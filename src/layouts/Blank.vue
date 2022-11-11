@@ -6,8 +6,6 @@
 </script>
 
 <template>
-  blank
-
       <main>
         <slot></slot>
       </main>

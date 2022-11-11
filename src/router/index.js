@@ -7,6 +7,7 @@ import layoutBlank from '../layouts/Blank.vue'
 
 
 
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -31,7 +32,7 @@ const router = createRouter({
       name: 'login',
       component: () => import('../views/Login.vue'),
       meta: {
-        layout: dashboard
+        layout: layoutBlank
       }
     },
     {
