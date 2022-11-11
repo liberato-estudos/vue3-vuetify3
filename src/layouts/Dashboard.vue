@@ -34,7 +34,7 @@
     <v-main>
       <v-container fluid style="height: 100vh;">
         <slot></slot>
-        <p>{{ user.name ? user.name : 'Loading...' }}</p>
+        <!-- <p>{{ user.name ? user.name : 'Loading...' }}</p> -->
       </v-container>
 
     </v-main>
