@@ -24,8 +24,8 @@
       <v-list density="compact" nav>
 
         <v-list-item to="/" prepend-icon="mdi-view-dashboard" title="Home" value="home"></v-list-item>
-        <v-list-item to="/about" prepend-icon="mdi-account-group" title="Integradores" value="integradores">
-        </v-list-item>
+        <v-list-item to="/about" prepend-icon="mdi-account-group" title="Integradores" value="integradores"></v-list-item>
+        <v-list-item to="/about" prepend-icon="mdi-card-account-details" title="Visitantes" value="visitantes"></v-list-item>
         <v-list-item to="/login" prepend-icon="mdi-account" title="Login" value="login"></v-list-item>
 
 
