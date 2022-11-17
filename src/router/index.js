@@ -50,7 +50,8 @@ const router = createRouter({
       meta: {
         layout: dashboard
       }
-    }
+    },
+
   ]
 })
 

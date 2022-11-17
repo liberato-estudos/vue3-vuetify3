@@ -30,6 +30,7 @@
         <v-list-item to="/visitantes" prepend-icon="mdi-card-account-details" title="Visitantes" value="visitantes">
         </v-list-item>
         <v-list-item to="/login" prepend-icon="mdi-account" title="Login" value="login"></v-list-item>
+        <v-list-item to="/logout" prepend-icon="mdi-account" title="Logout" value="logout"></v-list-item>
 
 
       </v-list>
