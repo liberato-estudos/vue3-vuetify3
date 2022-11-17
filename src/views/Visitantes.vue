@@ -1,8 +1,9 @@
 <template>
   <h1>Visitantes</h1>
 
-  <v-card class="pa-3 my-2">
-      <v-btn color="primary">Adicionar</v-btn>
+  <v-card class="pa-3 my-2 ">
+      <v-btn color="primary" class="mr-2">Cadastrar</v-btn>
+      <v-btn color="primary" class="mr-1">Cadastrar em Lote</v-btn>
     </v-card>
   <v-card>
 
