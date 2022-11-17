@@ -36,16 +36,8 @@
       </v-list>
     </v-navigation-drawer>
 
-
     <v-main>
-      <v-container fluid class="container">
-
         <slot></slot>
-
-
-
-      </v-container>
-
     </v-main>
 
   </v-app>
@@ -58,11 +50,6 @@
   /* opacity: 0.3; */
 }
 
-.container {
-  /* height: calc(90vh); */
-  /* background-color: #fbfbfb; */
-  /* background-color: #e1e1e1; */
-}
 </style>
 
 <script setup>

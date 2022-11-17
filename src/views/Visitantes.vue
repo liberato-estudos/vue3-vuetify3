@@ -1,31 +1,35 @@
 <template>
-  <h1>Visitantes</h1>
+  <v-container>
 
-  <v-card class="pa-3 my-2 ">
+
+    <div class="text-h5 text-sm-h4 text-md-h4 text-lg-h4 mb-3 pl-1 font-weight-bold">Visitantes</div>
+
+    <v-card class="pa-3 my-2 ">
       <v-btn color="primary" class="mr-2">Cadastrar</v-btn>
       <v-btn color="primary" class="mr-1">Cadastrar em Lote</v-btn>
     </v-card>
-  <v-card>
+    <v-card>
 
-    <v-table>
-      <thead>
-        <tr>
-          <th class="text-left">
-            Name
-          </th>
-          <th class="text-left">
-            Calories
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="item in desserts" :key="item.name">
-          <td>{{ item.name }}</td>
-          <td>{{ item.calories }}</td>
-        </tr>
-      </tbody>
-    </v-table>
-  </v-card>
+      <v-table>
+        <thead>
+          <tr>
+            <th class="text-left">
+              Name
+            </th>
+            <th class="text-left">
+              Calories
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="item in desserts" :key="item.name">
+            <td>{{ item.name }}</td>
+            <td>{{ item.calories }}</td>
+          </tr>
+        </tbody>
+      </v-table>
+    </v-card>
+  </v-container>
 </template>
 
 <script setup>

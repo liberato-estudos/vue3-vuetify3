@@ -1,10 +1,6 @@
 <template>
-  <!-- <div class="auth-wrapper d-flex align-center justify-center pa-4"> -->
 
-
-
-    <v-container fluid class="container">
-
+  <v-container fluid class="container">
 
     <v-card class="pa-4 pt-7" max-width="448" width="448">
       <v-card-item class="justify-center">
@@ -22,34 +18,22 @@
             <v-col cols="12">
               <v-text-field label="Email" type="email" />
             </v-col>
-
             <!-- password -->
             <v-col cols="12">
-              <v-text-field label="Password" :type="isPasswordVisible ? 'text' : 'password'" append-inner-icon="mdi-eye-outline"  @click:append-inner="isPasswordVisible = !isPasswordVisible" />
+              <v-text-field label="Password" :type="isPasswordVisible ? 'text' : 'password'"
+                append-inner-icon="mdi-eye-outline" @click:append-inner="isPasswordVisible = !isPasswordVisible" />
 
 
               <!-- login button -->
-              <v-btn block type="submit" to="/" color="primary" size="large" >
+              <v-btn block type="submit" to="/" color="primary" size="large">
                 Login
               </v-btn>
-
-
-
             </v-col>
-
-
-
-
           </v-row>
         </v-form>
       </v-card-text>
-
     </v-card>
   </v-container>
-
-
-
-  <!-- </div> -->
 </template>
 
 <style scoped>

@@ -1,28 +1,28 @@
 <template>
-  <div class="text-h5 text-sm-h4 text-md-h4 text-lg-h4 mb-3 pl-1 font-weight-medium">Home</div>
+  <v-container>
 
-  <v-card>
+    <div class="text-h5 text-sm-h4 text-md-h4 text-lg-h4 mb-3 pl-1 font-weight-bold">Home</div>
 
-    <v-container fluid>
-      <v-row>
-        <v-col cols="3" v-for="i in 10">
-          <v-card
-        	title="Card title"
-	  			subtitle="Subtitle"
-		  		text="..."
-  				variant="tonal">
-        </v-card>
-      </v-col>
+    <v-card>
+
+      <v-container fluid>
+        <v-row>
+          <v-col cols="3" v-for="i in 50">
+            <v-card title="Card title" subtitle="Subtitle" text="..." variant="tonal">
+            </v-card>
+          </v-col>
 
 
-    </v-row>
+        </v-row>
+      </v-container>
+    </v-card>
   </v-container>
-</v-card>
 
 
 </template>
 
 <style scoped>
+
 </style>
 
 
