@@ -1,25 +1,32 @@
 <template>
-  <v-layout>
-    <v-row>
-      <v-col cols="12">
-        <h1>Home </h1>
-        <!-- <v-card>
-          <v-card-title>
-            <v-text-field
-              append-icon="mdi-magnify"
-              label="Search"
-              single-line
-              hide-details
-            ></v-text-field>
-          </v-card-title>
-        </v-card> -->
+  <div class="text-h5 text-sm-h4 text-md-h4 text-lg-h4 mb-3 pl-1 font-weight-medium">Home</div>
 
-      </v-col>
-      <v-col>
-        <v-card>
-          oi
+  <v-card>
+
+    <v-container fluid>
+      <v-row>
+        <v-col cols="3" v-for="i in 10">
+          <v-card
+        	title="Card title"
+	  			subtitle="Subtitle"
+		  		text="..."
+  				variant="tonal">
         </v-card>
       </v-col>
+
+
     </v-row>
-  </v-layout>
+  </v-container>
+</v-card>
+
+
 </template>
+
+<style scoped>
+</style>
+
+
+<script setup>
+
+
+</script>

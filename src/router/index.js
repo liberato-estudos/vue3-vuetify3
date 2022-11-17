@@ -20,9 +20,9 @@ const router = createRouter({
       }
     },
     {
-      path: '/about',
-      name: 'about',
-      component: () => import('../views/About.vue'),
+      path: '/integradores',
+      name: 'integradores',
+      component: () => import('../views/Integradores.vue'),
       meta: {
         layout: dashboard
       }
@@ -44,9 +44,9 @@ const router = createRouter({
       }
     },
     {
-      path: '/about',
-      name: 'about',
-      component: () => import('../views/About.vue'),
+      path: '/visitantes',
+      name: 'visitantes',
+      component: () => import('../views/Visitantes.vue'),
       meta: {
         layout: dashboard
       }

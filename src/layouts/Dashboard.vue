@@ -1,5 +1,6 @@
 <template>
-  <v-layout class="layout-wrapper layout-nav-type-vertical">
+
+  <v-app>
 
     <v-app-bar color="primary" prominent>
       <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
@@ -24,21 +25,29 @@
       <v-list density="compact" nav>
 
         <v-list-item to="/" prepend-icon="mdi-view-dashboard" title="Home" value="home"></v-list-item>
-        <v-list-item to="/about" prepend-icon="mdi-account-group" title="Integradores" value="integradores"></v-list-item>
-        <v-list-item to="/about" prepend-icon="mdi-card-account-details" title="Visitantes" value="visitantes"></v-list-item>
+        <v-list-item to="/integradores" prepend-icon="mdi-account-group" title="Integradores" value="integradores">
+        </v-list-item>
+        <v-list-item to="/visitantes" prepend-icon="mdi-card-account-details" title="Visitantes" value="visitantes">
+        </v-list-item>
         <v-list-item to="/login" prepend-icon="mdi-account" title="Login" value="login"></v-list-item>
 
 
       </v-list>
     </v-navigation-drawer>
+
+
     <v-main>
-      <v-container fluid style="height: 100vh;">
+      <v-container fluid class="container">
+
         <slot></slot>
-        <!-- <p>{{ user.name ? user.name : 'Loading...' }}</p> -->
+
+
+
       </v-container>
 
     </v-main>
-  </v-layout>
+
+  </v-app>
 
 </template>
 
@@ -47,23 +56,21 @@
   width: 70px;
   /* opacity: 0.3; */
 }
+
+.container {
+  /* height: calc(90vh); */
+  /* background-color: #fbfbfb; */
+  /* background-color: #e1e1e1; */
+}
 </style>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue';
+import { ref } from 'vue';
 import { useDisplay } from 'vuetify';
 
+
 const drawer = ref(true)
-const display = useDisplay()
-
-
-const user = ref({})
-onMounted(() => {
-  setTimeout(() => {
-    user.value.name = 'joao'
-    // console.log('timer')
-  }, 2000);
-})
+const display = useDisplay();
 
 </script>
 
