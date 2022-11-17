@@ -5,19 +5,22 @@
     <div class="text-h5 text-sm-h4 text-md-h4 text-lg-h4 mb-3 pl-1 font-weight-bold">Visitantes</div>
 
     <v-card class="pa-3 my-2 ">
-      <v-btn color="primary" class="mr-2">Cadastrar</v-btn>
-      <v-btn color="primary" class="mr-1">Cadastrar em Lote</v-btn>
+      <CadastroVisitanteDialog />
+      <CadastroVisitanteLoteDialog />
     </v-card>
-    <v-card>
 
+    <v-card>
       <v-table>
         <thead>
           <tr>
             <th class="text-left">
-              Name
+              Visitante
             </th>
             <th class="text-left">
-              Calories
+              Sexo
+            </th>
+            <th class="text-left">
+              Ações
             </th>
           </tr>
         </thead>
@@ -33,6 +36,9 @@
 </template>
 
 <script setup>
+
+import CadastroVisitanteDialog from '@/components/CadastroVisitanteDialog.vue';
+import CadastroVisitanteLoteDialog from '@/components/CadastroVisitanteLoteDialog.vue';
 
 const desserts = [
   {

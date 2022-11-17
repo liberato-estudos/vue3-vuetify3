@@ -7,9 +7,13 @@
 
       <v-container fluid>
         <v-row>
-          <v-col cols="3" v-for="i in 50">
-            <v-card title="Card title" subtitle="Subtitle" text="..." variant="tonal">
+          <v-col cols="4" v-for="i in 50">
+            <v-card prepend-icon="mdi-account" color="grey-800" title="Card title" subtitle="Subtitle" text="..." variant="tonal">
+
             </v-card>
+
+
+
           </v-col>
 
 
