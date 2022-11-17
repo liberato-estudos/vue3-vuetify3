@@ -1,45 +1,117 @@
-<template>
-  <v-row>
-    <v-col cols="12">
-      <v-card max-width="500" class="mx-auto">
-        <v-list>
-          <v-list-item v-for="item in items" :key="item.title">
-            <v-list-item-icon>
-              <v-icon v-if="item.icon" color="pink">mdi-star</v-icon>
-            </v-list-item-icon>
-
-<v-list-item-content>
-              <v-list-item-title v-text="item.title"></v-list-item-title>
-            </v-list-item-content>
-
-<v-list-item-avatar>
-              <v-img :src="item.avatar"></v-img>
-            </v-list-item-avatar>
-          </v-list-item>
-        </v-list>
-      </v-card>
-    </v-col>
-  </v-row>
-</template>
-<script>
-export default {
-  name: "HelloWorld",
-  data: () => ({
-    items: [
-      {
-        icon: true,
-        title: "Jason Smith",
-        avatar: "https://cdn.vuetifyjs.com/images/lists/1.jpg",
-      },
-      {
-        title: "Travis Jones",
-        avatar: "https://cdn.vuetifyjs.com/images/lists/2.jpg",
-      },
-      {
-        title: "Ali Simpson",
-        avatar: "https://cdn.vuetifyjs.com/images/lists/3.jpg",
-      },
-    ],
-  }),
-};
+<script setup>
+const salesByCountries = [
+  {
+    abbr: 'US',
+    amount: '$8,656k',
+    country: 'United states of america',
+    change: '+25.8%',
+    sales: '894k',
+    color: 'success',
+  },
+  {
+    abbr: 'UK',
+    amount: '$2,415k',
+    country: 'United kingdom',
+    change: '-6.2%',
+    sales: '645k',
+    color: 'error',
+  },
+  {
+    abbr: 'IN',
+    amount: '$865k',
+    country: 'India',
+    change: '+12.4%',
+    sales: '148k',
+    color: 'warning',
+  },
+  {
+    abbr: 'JA',
+    amount: '$745k',
+    country: 'Japan',
+    change: '-11.9%',
+    sales: '86k',
+    color: 'secondary',
+  },
+  {
+    abbr: 'KO',
+    amount: '$45k',
+    country: 'Korea',
+    change: '+16.2%',
+    sales: '42k',
+    color: 'error',
+  },
+]
 </script>
+
+<template>
+  <VCard>
+    <VCardItem>
+      <VCardTitle>Sales by Countries</VCardTitle>
+
+      <template #append>
+        <div class="me-n3">
+          <VBtn
+            icon
+            size="x-small"
+            variant="text"
+            color="default"
+          >
+            <VIcon
+              size="24"
+              icon="mdi-dots-vertical"
+            />
+          </VBtn>
+        </div>
+      </template>
+    </VCardItem>
+
+    <VCardText>
+      <VList class="card-list">
+        <VListItem
+          v-for="data in salesByCountries"
+          :key="data.country"
+        >
+          <template #prepend>
+            <VAvatar
+              size="40"
+              variant="tonal"
+              :color="data.color"
+              class="me-3"
+            >
+              {{ data.abbr }}
+            </VAvatar>
+          </template>
+
+          <VListItemTitle class="mb-1">
+            <span class="text-sm font-weight-semibold">{{ data.amount }}</span>
+            <VIcon
+              size="22"
+              :color="data.change.charAt(0) === '+' ? 'success' : 'error'"
+              class="mx-1"
+            >
+              {{ data.change.charAt(0) === '+' ? 'mdi-chevron-up' : 'mdi-chevron-down' }}
+            </VIcon>
+            <span :class="`text-xs ${data.change.charAt(0) === '+' ? 'text-success' : 'text-error'}`">
+              {{ data.change.slice(1) }}
+            </span>
+          </VListItemTitle>
+
+          <VListItemSubtitle class="text-xs">
+            {{ data.country }}
+          </VListItemSubtitle>
+
+          <template #append>
+            <div>
+              <h4 class="font-weight-semibold">
+                {{ data.sales }}
+              </h4>
+              <span class="text-xs text-medium-emphasis">Sales</span>
+            </div>
+          </template>
+        </VListItem>
+      </VList>
+    </VCardText>
+  </VCard>
+</template>
+
+
